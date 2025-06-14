@@ -96,7 +96,7 @@ export const getweather = async (req, res) => {
 
   } catch (error) {
     console.error("Error:", error.message);
-    res.status(500).json({ error: "Failed to fetch or save weather data" });
+    res.status(404).json({ error: "Not Found" });
   }
 };
 
