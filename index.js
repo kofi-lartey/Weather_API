@@ -1,8 +1,8 @@
 import express from 'express';
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import cors from "cors";
 import { weatherData } from './routers/weather_rotes.js';
+import cors from "cors";
 
 
 const app = express();
@@ -15,7 +15,7 @@ dotenv.config();
 
 app.use("/api/v1",weatherData)
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5080;
 
 export const apikey = process.env.Weather_API_Key;
 
