@@ -10,6 +10,7 @@ const app = express();
 app.use(express.json());
 
 app.use(cors());
+
 dotenv.config();
 
 app.use("/api/v1",weatherData)
@@ -24,7 +25,7 @@ mongoose.connect(MONGOURI)
 .then(()=>{
     console.log(`connected successfully`);
     app.listen(PORT,()=>{
-        console.log(`server is running on Port${PORT}`);
+        console.log(`server is running on Port ${PORT}`);
     })
 }).catch((error)=>{
     console.log(error,"check your connection")
